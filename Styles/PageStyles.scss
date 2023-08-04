@@ -12,6 +12,7 @@ main {
     transform: translate(300%, 0);
 }
 
+
 #login,
 #register {
     /*I don't like this gradient much. Tried for a borealis look, but it didn't work.*/
@@ -27,8 +28,36 @@ main {
             color: rgb(167, 146, 107);
         }
     }
+
+    &:hover {}
 }
 
+#login-btn,
+#register-btn {
+    background-color: rgba(245, 222, 179, 0.30);
+    color: $textColor;
+}
+
+#register-option {
+    color: gainsboro;
+    cursor: pointer;
+}
+
+/*Ripple*/
+
+.ripple {
+    border-radius: 100%;
+    animation: ripple-expand 2s forwards;
+}
+
+@keyframes ripple-expand {
+    100% {
+        width: 200%;
+        height: 200%;
+    }
+}
+
+/*Slide animations*/
 
 .slide-out-left {
     animation: slide-out-and-fade-out-left .75s forwards;
@@ -44,17 +73,6 @@ main {
 
 .slide-in-right {
     animation: slide-in-and-fade-in-right .75s forwards .5s;
-}
-
-#login-btn,
-#register-btn {
-    background-color: rgba(245, 222, 179, 0.30);
-    color: $textColor;
-}
-
-#register-option {
-    color: gainsboro;
-    cursor: pointer;
 }
 
 @keyframes slide-out-and-fade-out-left {
