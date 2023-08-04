@@ -1,0 +1,41 @@
+$textColor: wheat;
+
+body {
+    background-color: rgb(54, 54, 54);
+}
+
+main {
+    height: 40rem;
+}
+
+#register {
+    transform: translate(102%, 0);
+}
+
+#login,
+#register {
+    /*I don't like this gradient much. Tried for a borealis look, but it didn't work.*/
+    background-image: linear-gradient(280deg, rgba(70, 197, 144, 0.8), purple, rgba(90, 0, 90, 0.8), rgb(0, 0, 134), rgba(71, 61, 139, 0.9));
+    border-radius: 3rem;
+
+    & input {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: $textColor;
+        border-color: $textColor;
+
+        &::placeholder {
+            color: rgb(167, 146, 107);
+        }
+    }
+}
+
+#login-btn,
+#register-btn {
+    background-color: rgba(245, 222, 179, 0.30);
+    color: $textColor;
+}
+
+#register-option {
+    color: gainsboro;
+    cursor: pointer;
+}
