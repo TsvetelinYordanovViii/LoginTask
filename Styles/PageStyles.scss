@@ -9,7 +9,7 @@ main {
 }
 
 #register {
-    transform: translate(102%, 0);
+    transform: translate(300%, 0);
 }
 
 #login,
@@ -27,6 +27,22 @@ main {
             color: rgb(167, 146, 107);
         }
     }
+
+    &.slide-out-left {
+        animation: slide-out-and-fade-out-left 2s;
+    }
+
+    &.slide-out-right {
+        animation: slide-out-and-fade-out-right 2s;
+    }
+
+    &.slide-in-left {
+        animation: slide-out-and-fade-in-left 2s;
+    }
+
+    &.slide-in-right {
+        animation: slide-out-and-fade-in-right 2s;
+    }
 }
 
 #login-btn,
@@ -38,4 +54,91 @@ main {
 #register-option {
     color: gainsboro;
     cursor: pointer;
+}
+
+@keyframes slide-out-and-fade-out-left {
+
+    /*Shrink*/
+    10% {
+        transform: translate(0, 0), scale(80%);
+    }
+
+    20% {
+        transform: translate(20%, 0), scale(80%);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    /*Move*/
+    100% {
+
+        opacity: 0;
+        transform: translate(-300%, 0);
+    }
+}
+
+@keyframes slide-out-and-fade-out-right {
+
+    /*Shrink*/
+    10% {
+        transform: translate(0, 0), scale(80%);
+    }
+
+    20% {
+        transform: translate(-20%, 0), scale(80%);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    /*Move*/
+    100% {
+
+        opacity: 0;
+        transform: translate(300%, 0);
+    }
+}
+
+
+@keyframes slide-in-and-fade-in-left {
+
+    0% {
+        transform: translate(-300%, 0), scale(80%);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(20%, 0), scale(80%);
+    }
+
+    100% {
+        transform: translate(0, 0), scale(100%);
+    }
+}
+
+@keyframes slide-in-and-fade-in-right {
+
+    0% {
+        transform: translate(300%, 0), scale(80%);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(-20%, 0), scale(80%);
+    }
+
+    100% {
+        transform: translate(0, 0), scale(100%);
+    }
 }
