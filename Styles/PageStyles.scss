@@ -31,19 +31,19 @@ main {
 
 
 .slide-out-left {
-    animation: slide-out-and-fade-out-left 1s forwards;
+    animation: slide-out-and-fade-out-left .75s forwards;
 }
 
 .slide-out-right {
-    animation: slide-out-and-fade-out-right 1s forwards;
+    animation: slide-out-and-fade-out-right .75s forwards;
 }
 
 .slide-in-left {
-    animation: slide-in-and-fade-in-left 1s forwards .75s;
+    animation: slide-in-and-fade-in-left .75s forwards .5s;
 }
 
 .slide-in-right {
-    animation: slide-in-and-fade-in-right 1s forwards .75s;
+    animation: slide-in-and-fade-in-right .75s forwards .5s;
 }
 
 #login-btn,
@@ -64,12 +64,12 @@ main {
         transform: translate(0, 0) scale(80%);
     }
 
-    50% {
-        transform: translate(20%, 0) scale(80%);
+    35% {
+        opacity: 1;
     }
 
-    90% {
-        opacity: 1;
+    50% {
+        transform: translate(20%, 0) scale(80%);
     }
 
     /*Move*/
@@ -87,12 +87,12 @@ main {
         transform: translate(0, 0) scale(80%);
     }
 
-    20% {
-        transform: translate(-20%, 0) scale(80%);
+    35% {
+        opacity: 1;
     }
 
-    90% {
-        opacity: 1;
+    50% {
+        transform: translate(-20%, 0) scale(80%);
     }
 
     /*Move*/
@@ -111,12 +111,13 @@ main {
         opacity: 0;
     }
 
-    10% {
-        opacity: 1;
+    60% {
+        transform: translate(-20%, 0) scale(80%);
     }
 
-    80% {
-        transform: translate(-20%, 0) scale(80%);
+    90% {
+        opacity: 1;
+        transform: translate(0, 0) scale(80%);
     }
 
     100% {
@@ -131,12 +132,13 @@ main {
         opacity: 0;
     }
 
-    10% {
-        opacity: 1;
+    60% {
+        transform: translate(20%, 0) scale(80%);
     }
 
-    80% {
-        transform: translate(20%, 0) scale(80%);
+    90% {
+        opacity: 1;
+        transform: translate(0, 0) scale(80%);
     }
 
     100% {
