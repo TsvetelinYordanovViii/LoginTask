@@ -206,3 +206,29 @@ main {
         transform: translate(0, 0) scale(100%);
     }
 }
+
+/*Alert Message*/
+
+.invalid-shake {
+
+    animation: shake 1s;
+}
+
+/*Popup Slide Animation*/
+
+@keyframes shake {
+
+    15%,
+    45%,
+    75% {
+        transform: translate(-0.35rem, 0);
+        opacity: 1;
+    }
+
+    30%,
+    60%,
+    90% {
+        transform: translate(0.35rem, 0);
+        opacity: 1;
+    }
+}

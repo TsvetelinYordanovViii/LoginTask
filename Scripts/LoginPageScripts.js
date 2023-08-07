@@ -58,18 +58,22 @@ registerUser = () => {
 
     if (!registrationUsername.checkValidity() || registrationUsername.value.trim() === '') {
         createCustomAlert('failure', 'No username is entered.');
+        showInvalidField(registrationUsername);
         skipFunction = true;
     }
     else if (!registrationEmail.checkValidity()) {
         createCustomAlert('failure', 'Valid email address is required.');
+        showInvalidField(registrationEmail);
         skipFunction = true;
     }
     else if (!registrationPhone.checkValidity() || registrationPhone.value.trim() === '') {
         createCustomAlert('failure', 'Phone number is required.');
+        showInvalidField(registrationPhone);
         skipFunction = true;
     }
-    else if (!registrationPassword.checkValidity() || registrationPassword.value.length < 5) {
+    else if (!registrationPassword.checkValidity() || registrationPassword.value.length < 6) {
         createCustomAlert('failure', 'Enter a password with at least 6 characters.');
+        showInvalidField(registrationPassword);
         skipFunction = true;
     }
     else {
@@ -79,6 +83,13 @@ registerUser = () => {
         </svg>
         Successfully registered.`);
     }
+}
+
+showInvalidField = (field) => {
+    field.classList.add('invalid-shake');
+    field.classList.add('border-danger');
+
+    setTimeout(() => field.classList.remove('invalid-shake'), 1000);
 }
 
 createCustomAlert = (state, message) => {
@@ -91,9 +102,15 @@ createCustomAlert = (state, message) => {
     }
     $('#login-column').append(alertMessage);
 
-    removeDelay = setTimeout(() => alertMessage.remove(), 3000);
+    setTimeout(() => alertMessage.remove(), 3000);
 }
-showFieldTooltip = () => {
+
+$('input').click(() => {
+    $('input').removeClass('invalid-shake border-danger');
+    showFieldTooltip();
+});
+
+showFieldTooltip = (tooltipText) => {
 
 }
 
