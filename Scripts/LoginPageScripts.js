@@ -157,10 +157,22 @@ removeFieldTooltips = () => {
     setTimeout(() => tooltips.remove(), 1000);
 }
 
-hideFieldTooltip = () => {
+$('#login-btn').click((e) => { createRipple(e, '#login-btn') })
 
-}
+$('#register-btn').click((e) => { createRipple(e, '#register-btn') })
 
-createRipple = (mouseX, mouseY) => {
+createRipple = (cursor, buttonId) => {
 
+    let ripple = $('<span class="ripple position-absolute"></span>');
+
+    let buttonPositionX = $(buttonId).offset();
+
+    let clickPositionX = cursor.pageX - buttonPositionX.left;
+    let clickPositionY = cursor.pageY - buttonPositionX.top;
+
+    ripple.css("margin-left", clickPositionX);
+    ripple.css("margin-top", clickPositionY);
+
+    $(buttonId).append(ripple);
+    setTimeout(() => { ripple.remove() }, 2000);
 }
