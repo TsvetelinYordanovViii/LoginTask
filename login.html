@@ -16,10 +16,15 @@
         <div id="login-row" class="row h-100 d-flex justify-content-center ms-2 me-2">
             <div id="login-column" class="col-lg-4 position-relative d-flex justify-content-center align-items-center ">
                 <form id="login" class="card card-body w-75 position-absolute border-0 pt-5" action="">
-                    <input id="login-username" required type="text" name="username" placeholder="Username"
-                        class="form-control mt-4 mb-3">
-                    <input id="login-password" required type="password" name="password" placeholder="Password"
-                        class="form-control mb-3">
+                    <!--Those container divs are useful for tooltip positioning.-->
+                    <div id="login-username-container" class="position-relative mb-3">
+                        <input id="login-username" required type="text" name="username" placeholder="Username"
+                            class="form-control">
+                    </div>
+                    <div id="login-password-container" class="position-relative mb-3">
+                        <input id="login-password" required type="password" name="password" placeholder="Password"
+                            class="form-control">
+                    </div>
                     <button type="button" id="login-btn" class="btn mb-3">
                         Login
                     </button>
@@ -29,14 +34,22 @@
                 </form>
                 <form id="register" class="card card-body w-75 position-absolute border-0 pt-5 slided-out-right"
                     action="">
-                    <input id="register-username" required type="text" name="username" placeholder="Username"
-                        class="form-control mt-4 mb-3">
-                    <input id="register-email" required type="email" name="email" placeholder="user_email@email.com"
-                        class="form-control mb-3">
-                    <input id="register-phone" required type="text" name="phone" placeholder="Phone Number"
-                        class="form-control mb-3">
-                    <input id="register-password" required type="password" name="password" placeholder="Password"
-                        class="form-control mb-3">
+                    <div id="register-username-container" class="position-relative mt-4 mb-3">
+                        <input id="register-username" required type="text" name="username" placeholder="Username"
+                            class="form-control">
+                    </div>
+                    <div id="register-email-container" class="position-relative mb-3">
+                        <input id="register-email" required type="email" name="email" placeholder="Email Address"
+                            class="form-control">
+                    </div>
+                    <div id="register-phone-container" class="position-relative mb-3">
+                        <input id="register-phone" required type="text" name="phone" placeholder="Phone Number"
+                            class="form-control">
+                    </div>
+                    <div id="register-password-container" class="position-relative mb-3">
+                        <input id="register-password" required type="password" name="password" placeholder="Password"
+                            class="form-control">
+                    </div>
                     <button type="button" id="register-btn" class="btn mb-3">
                         Register
                     </button>

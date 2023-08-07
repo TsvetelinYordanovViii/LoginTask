@@ -93,7 +93,7 @@ showInvalidField = (field) => {
 }
 
 createCustomAlert = (state, message) => {
-    const alertMessage = $(`<div class="alert-message border border-3 position-absolute text-color-white rounded-4 p-2 w-75 text-light">${message}</div>`);
+    const alertMessage = $(`<div class="alert-message border border-3 position-absolute rounded-4 p-2 w-75 text-light">${message}</div>`);
     if (state === 'failure') {
         alertMessage.addClass('bg-danger border-danger-subtle');
     }
@@ -105,13 +105,56 @@ createCustomAlert = (state, message) => {
     setTimeout(() => alertMessage.remove(), 3000);
 }
 
-$('input').click(() => {
+//Since there isn't an easy way to select the input's parent div, I had to manually specify to the event listeners their respective parent div.
+//Focus covers the two required scenarios - typing and clicking and as a bonus tabbing through.
+//It also has the advantage of not triggering multiple times when writing.
+
+$('#login-username').focus(() => {
     $('input').removeClass('invalid-shake border-danger');
-    showFieldTooltip();
+    showFieldTooltip($('#login-username').attr('placeholder'), $('#login-username-container').attr('id'));
 });
 
-showFieldTooltip = (tooltipText) => {
+$('#login-password').focus(() => {
+    $('input').removeClass('invalid-shake border-danger');
+    showFieldTooltip($('#login-password').attr('placeholder'), $('#login-password-container').attr('id'));
+});
 
+
+$('#register-username').focus(() => {
+    $('input').removeClass('invalid-shake border-danger');
+    showFieldTooltip($('#register-username').attr('placeholder'), $('#register-username-container').attr('id'));
+});
+
+
+$('#register-email').focus(() => {
+    $('input').removeClass('invalid-shake border-danger');
+    showFieldTooltip($('#register-email').attr('placeholder'), $('#register-email-container').attr('id'));
+});
+
+
+$('#register-phone').focus(() => {
+    $('input').removeClass('invalid-shake border-danger');
+    showFieldTooltip($('#register-phone').attr('placeholder'), $('#register-phone-container').attr('id'));
+});
+
+
+$('#register-password').focus(() => {
+    $('input').removeClass('invalid-shake border-danger');
+    showFieldTooltip($('#register-password').attr('placeholder'), $('#register-password-container').attr('id'));
+});
+
+$('input').blur(() => removeFieldTooltips())
+
+showFieldTooltip = (tooltipText, containingDivId) => {
+    const tooltip = $(`<div class="tooltip position-absolute rounded-3 p-2 bg-dark text-light z-1 tooltip-slide-up">${tooltipText}</div>`);
+    $('#' + containingDivId).prepend(tooltip);
+}
+
+removeFieldTooltips = () => {
+    const tooltips = $(`.tooltip`);
+    tooltips.addClass('tooltip-slide-down')
+
+    setTimeout(() => tooltips.remove(), 1000);
 }
 
 hideFieldTooltip = () => {
