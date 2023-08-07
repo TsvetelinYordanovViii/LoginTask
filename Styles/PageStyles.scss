@@ -24,14 +24,29 @@ main {
             color: rgb(167, 146, 107);
         }
     }
-
-    &:hover {}
 }
 
+/*This doesn't work on Mozilla*/
+@property --btn-gradient-center {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: rgba(245, 222, 179, 0.30);
+}
+
+/**/
 #login-btn,
 #register-btn {
-    background-color: rgba(245, 222, 179, 0.30);
+    --btn-gradient-center: rgba(245, 222, 179, 0.30);
+    background-image: radial-gradient(var(--btn-gradient-center), rgba(245, 222, 179, 0.30));
     color: $textColor;
+
+    transition: --btn-gradient-center 1s, --btn-gradient-outer 1s;
+
+    &:hover,
+    &.focus-visible {
+        --btn-gradient-center: rgba(245, 222, 179, 0.55);
+    }
+
 }
 
 #register-option,
