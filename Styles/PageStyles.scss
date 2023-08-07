@@ -8,10 +8,6 @@ main {
     height: 40rem;
 }
 
-#register {
-    transform: translate(300%, 0);
-}
-
 
 #login,
 #register {
@@ -38,7 +34,8 @@ main {
     color: $textColor;
 }
 
-#register-option {
+#register-option,
+#login-option {
     color: gainsboro;
     cursor: pointer;
 }
@@ -107,6 +104,16 @@ main {
     animation: slide-in-and-fade-in-right .75s forwards .5s;
 }
 
+.slided-out-left {
+    opacity: 0;
+    transform: translate(-300%, 0);
+}
+
+.slided-out-right {
+    opacity: 0;
+    transform: translate(300%, 0);
+}
+
 @keyframes slide-out-and-fade-out-left {
 
     /*Shrink*/
@@ -171,6 +178,8 @@ main {
     }
 
     100% {
+
+        opacity: 1;
         transform: translate(0, 0) scale(100%);
     }
 }
@@ -192,6 +201,8 @@ main {
     }
 
     100% {
+
+        opacity: 1;
         transform: translate(0, 0) scale(100%);
     }
 }

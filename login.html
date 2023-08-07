@@ -12,10 +12,10 @@
 
 <body>
     <header id="starry-header"></header>
-    <main class="container overflow-hidden">
+    <main class="overflow-hidden">
         <div id="login-row" class="row h-100 d-flex justify-content-center ms-2 me-2">
-            <div id="login-column" class="col-md-4 position-relative d-flex justify-content-center align-items-center ">
-                <form id="login" class="card card-body w-100 position-absolute border-0 pt-5" action="">
+            <div id="login-column" class="col-lg-4 position-relative d-flex justify-content-center align-items-center ">
+                <form id="login" class="card card-body w-75 position-absolute border-0 pt-5" action="">
                     <input id="login-username" required type="text" name="username" placeholder="Username"
                         class="form-control mt-4 mb-3">
                     <input id="login-password" required type="password" name="password" placeholder="Password"
@@ -27,7 +27,8 @@
                         Register
                     </p>
                 </form>
-                <form id="register" class="card card-body w-100 position-absolute border-0 pt-5" action="">
+                <form id="register" class="card card-body w-75 position-absolute border-0 pt-5 slided-out-right"
+                    action="">
                     <input id="register-username" required type="text" name="username" placeholder="Username"
                         class="form-control mt-4 mb-3">
                     <input id="register-email" required type="email" name="email" placeholder="user_email@email.com"
@@ -39,6 +40,9 @@
                     <button type="button" id="register-btn" class="btn mb-3">
                         Register
                     </button>
+                    <p id="login-option" class="text-end me-2">
+                        Login
+                    </p>
                 </form>
             </div>
         </div>
