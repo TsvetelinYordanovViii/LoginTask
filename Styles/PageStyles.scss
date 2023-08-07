@@ -112,11 +112,13 @@ main {
 }
 
 /*Ripple*/
-$rippleStartingDiameter: 0.5rem;
 
 .ripple {
-    width: $rippleStartingDiameter;
-    height: $rippleStartingDiameter;
+    left: 50%;
+    top: 50%;
+    width: 5cm;
+    height: 5cm;
+    transform: scale(0%);
 
     opacity: 1;
     background-color: rgba(245, 245, 220, 0.5);
@@ -126,7 +128,7 @@ $rippleStartingDiameter: 0.5rem;
 
 @keyframes ripple-expand {
     100% {
-        transform: scale(10%);
+        transform: scale(100%);
         opacity: 0;
     }
 }

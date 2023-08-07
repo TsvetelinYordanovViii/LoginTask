@@ -163,12 +163,22 @@ $('#register-btn').click((e) => { createRipple(e, '#register-btn') })
 
 createRipple = (cursor, buttonId) => {
 
-    let ripple = $('<span class="ripple position-absolute"></span>');
+    const ripple = $('<span class="ripple position-absolute"></span>');
 
-    let buttonPositionX = $(buttonId).offset();
+    const buttonPositionOffsets = $(buttonId).offset();
 
-    let clickPositionX = cursor.pageX - buttonPositionX.left;
-    let clickPositionY = cursor.pageY - buttonPositionX.top;
+    const buttonWidth = $(buttonId).outerWidth();
+    const buttonHeight = $(buttonId).outerHeight();
+
+    const rippleRadius = 188.983 / 2;
+
+    //Almost exact position is equal to the position of the cursor relative to the page, the position of the left and top border,
+    //the half of the button's width and height and the ripple max radius.
+    //For future readjustments to the ripple radius, it is good to have the browser display the max radius by setting the starting
+    //size to 100% in the translate rule and the message is shown after the ripple is appended.
+    const clickPositionX = cursor.pageX - buttonPositionOffsets.left - (buttonWidth / 2) - rippleRadius;
+    const clickPositionY = cursor.pageY - buttonPositionOffsets.top - (buttonHeight / 2) - rippleRadius;
+
 
     ripple.css("margin-left", clickPositionX);
     ripple.css("margin-top", clickPositionY);
