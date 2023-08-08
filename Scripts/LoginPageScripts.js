@@ -179,7 +179,6 @@ createRipple = (cursor, buttonId) => {
     const clickPositionX = cursor.pageX - buttonPositionOffsets.left - (buttonWidth / 2) - rippleRadius;
     const clickPositionY = cursor.pageY - buttonPositionOffsets.top - (buttonHeight / 2) - rippleRadius;
 
-
     ripple.css("margin-left", clickPositionX);
     ripple.css("margin-top", clickPositionY);
 
