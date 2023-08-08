@@ -4,7 +4,7 @@
     overflow: hidden;
     cursor: pointer;
     transition: width .5s;
-
+    color: black;
 }
 
 .social-media-icon {
@@ -12,60 +12,87 @@
     width: 3.5rem;
     height: 3.5rem;
 
-    transition: background-color .5s, color .5s;
+    transition: background-color .5s, color .5s, border-color .5s;
 }
 
 .social-media-name {
     width: 100%;
     height: 100%;
+    font-size: 1.15rem;
     color: transparent;
-    transition: color .5s;
+    background-color: gainsboro;
+
+    transition: color .5s, background-color .5s, border-color .5s;
 
     &.hoveredOver {
-        color: black;
+        color: white;
     }
 }
 
 #facebook {
     &:hover {
-        width: 8.25rem;
+        width: 9.25rem;
     }
 
     & .social-media-icon.hoveredOver {
+        border-color: darkblue !important;
         background-color: dodgerblue;
         color: white;
+    }
+
+    & .social-media-name.hoveredOver {
+        background-color: darkblue;
+        border-color: darkblue !important;
     }
 }
 
 #twitter {
     &:hover {
-        width: 7rem;
+        width: 7.5rem;
     }
 
     & .social-media-icon.hoveredOver {
+        border-color: darkcyan !important;
         background-color: skyblue;
         color: white;
+    }
+
+    & .social-media-name.hoveredOver {
+        background-color: darkcyan;
+        border-color: darkcyan !important;
     }
 }
 
 #instagram {
     &:hover {
-        width: 8.5rem;
+        width: 9.5rem;
     }
 
     & .social-media-icon.hoveredOver {
+        border-color: hotpink !important;
         background-color: rgb(255, 45, 150);
         color: white;
+    }
+
+    & .social-media-name.hoveredOver {
+        background-color: hotpink;
+        border-color: hotpink !important;
     }
 }
 
 #youtube {
     &:hover {
-        width: 8rem;
+        width: 8.5rem;
     }
 
     & .social-media-icon.hoveredOver {
+        border-color: darkred !important;
         background-color: red;
         color: white;
+    }
+
+    & .social-media-name.hoveredOver {
+        background-color: darkred;
+        border-color: darkred !important;
     }
 }

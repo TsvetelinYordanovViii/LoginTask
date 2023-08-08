@@ -29,4 +29,3 @@ $('#youtube').hover(() => {
     $('#youtube .social-media-name').removeClass('hoveredOver');
     $('#youtube .social-media-icon').removeClass('hoveredOver');
 })
-
