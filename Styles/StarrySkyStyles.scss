@@ -363,6 +363,7 @@ body {
     animation: star-fall 120s infinite linear;
 }
 
+/*This doesn't work well on Firefox. The stars*/
 @keyframes star-fall {
     0% {
         visibility: hidden;
