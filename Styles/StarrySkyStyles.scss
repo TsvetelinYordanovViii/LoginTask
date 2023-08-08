@@ -11,9 +11,12 @@ body {
     position: relative;
 }
 
+
 .star {
     position: absolute;
+    animation: star-fall 50s infinite linear;
 }
+
 
 .small {
     width: 0.25rem;
@@ -54,241 +57,330 @@ body {
 /*Starting positions*/
 
 .star:nth-child(1) {
+    translate: translateY(-30rem);
     top: 2rem;
     left: 10%;
 }
 
 .star:nth-child(2) {
+    translate: translateY(-30rem);
     top: 7rem;
     left: 15%;
 }
 
 .star:nth-child(3) {
+    translate: translateY(-30rem);
     top: 6rem;
     left: 20%;
 }
 
 .star:nth-child(4) {
+    translate: translateY(-30rem);
     top: 5rem;
     left: 30%;
 }
 
 .star:nth-child(5) {
+    translate: translateY(-30rem);
     top: 9rem;
     left: 40%;
 }
 
 .star:nth-child(6) {
+    translate: translateY(-30rem);
     top: 4rem;
     left: 60%;
 }
 
 .star:nth-child(7) {
+    translate: translateY(-30rem);
     top: 1rem;
     left: 70%
 }
 
 .star:nth-child(8) {
+    translate: translateY(-30rem);
     top: 17rem;
     left: 7%;
 }
 
 .star:nth-child(9) {
+    translate: translateY(-30rem);
     top: 7rem;
     left: 3%;
 }
 
 .star:nth-child(10) {
+    translate: translateY(-30rem);
     top: 8rem;
     left: 28%;
 }
 
 .star:nth-child(11) {
+    translate: translateY(-30rem);
     top: 10rem;
     left: 34%;
 }
 
 .star:nth-child(12) {
+    translate: translateY(-30rem);
     top: 6rem;
     left: 40%;
 }
 
 .star:nth-child(13) {
+    translate: translateY(-30rem);
     top: 4rem;
     left: 60%;
 }
 
 .star:nth-child(14) {
+    translate: translateY(-30rem);
     top: 1rem;
     left: 70%
 }
 
 .star:nth-child(15) {
+    translate: translateY(-30rem);
     top: 1rem;
     left: 17%;
 }
 
 .star:nth-child(16) {
+    translate: translateY(-30rem);
     top: 9rem;
     left: 14%;
 }
 
 .star:nth-child(17) {
+    translate: translateY(-30rem);
     top: 4rem;
     left: 4%;
 }
 
 .star:nth-child(18) {
+    translate: translateY(-30rem);
     top: 14rem;
     left: 15%;
 }
 
 .star:nth-child(19) {
+    translate: translateY(-30rem);
     top: 9rem;
     left: 87%;
 }
 
 .star:nth-child(20) {
+    translate: translateY(-30rem);
     top: 4rem;
     left: 54%;
 }
 
 .star:nth-child(21) {
+    translate: translateY(-30rem);
     top: 1rem;
     left: 76%
 }
 
 .star:nth-child(22) {
+    translate: translateY(-30rem);
     top: 2rem;
     left: 98%;
 }
 
 .star:nth-child(23) {
+    translate: translateY(-30rem);
     top: 7rem;
     left: 78%;
 }
 
 .star:nth-child(24) {
+    translate: translateY(-30rem);
     top: 6rem;
     left: 89%;
 }
 
 .star:nth-child(25) {
+    translate: translateY(-30rem);
     top: 5rem;
     left: 78%;
 }
 
 .star:nth-child(26) {
+    translate: translateY(-30rem);
     top: 9rem;
     left: 98%;
 }
 
 .star:nth-child(27) {
+    translate: translateY(-30rem);
     top: 17rem;
     left: 89%;
 }
 
 .star:nth-child(28) {
+    translate: translateY(-30rem);
     top: 11rem;
     left: 65%
 }
 
 .star:nth-child(29) {
+    translate: translateY(-30rem);
     top: 18rem;
     left: 10%;
 }
 
 .star:nth-child(30) {
+    translate: translateY(-30rem);
     top: 13rem;
     left: 15%;
 }
 
 .star:nth-child(31) {
+    translate: translateY(-30rem);
     top: 8rem;
     left: 29%;
 }
 
 .star:nth-child(32) {
+    translate: translateY(-30rem);
     top: 4rem;
     left: 34%;
 }
 
 .star:nth-child(33) {
+    translate: translateY(-30rem);
     top: 17rem;
     left: 21%;
 }
 
 .star:nth-child(34) {
+    translate: translateY(-30rem);
     top: 16rem;
     left: 65%;
 }
 
 .star:nth-child(35) {
+    translate: translateY(-30rem);
     top: 1rem;
     left: 43%
 }
 
 .star:nth-child(36) {
+    translate: translateY(-30rem);
     top: 15rem;
     left: 75%;
 }
 
 .star:nth-child(37) {
+    translate: translateY(-30rem);
     top: 3rem;
     left: 87%;
 }
 
 .star:nth-child(38) {
+    translate: translateY(-30rem);
     top: 14rem;
     left: 60%;
 }
 
 .star:nth-child(39) {
+    translate: translateY(-30rem);
     top: 12rem;
     left: 50%;
 }
 
 .star:nth-child(40) {
+    translate: translateY(-30rem);
     top: 9rem;
     left: 23%;
 }
 
 .star:nth-child(41) {
+    translate: translateY(-30rem);
     top: 4rem;
     left: 42%;
 }
 
 .star:nth-child(42) {
+    translate: translateY(-30rem);
     top: 7rem;
     left: 80%
 }
 
 .star:nth-child(43) {
+    translate: translateY(-30rem);
     top: 4rem;
     left: 10%;
 }
 
 .star:nth-child(44) {
+    translate: translateY(-30rem);
     top: 7rem;
     left: 55%;
 }
 
 .star:nth-child(45) {
+    translate: translateY(-30rem);
     top: 7rem;
     left: 20%;
 }
 
 .star:nth-child(46) {
+    translate: translateY(-30rem);
     top: 3rem;
     left: 30%;
 }
 
 .star:nth-child(47) {
+    translate: translateY(-30rem);
     top: 9rem;
     left: 70%;
 }
 
 .star:nth-child(48) {
+    translate: translateY(-30rem);
     top: 8rem;
     left: 90%;
+}
+
+/*Starfall*/
+
+.star:nth-child(2n) {
+    animation: star-fall 70s infinite linear;
+}
+
+.star:nth-child(3n) {
+    animation: star-fall 45s infinite linear;
+}
+
+.star:nth-child(4n) {
+    animation: star-fall 90s infinite linear;
+}
+
+
+.star:nth-child(7n) {
+    animation: star-fall 120s infinite linear;
+}
+
+@keyframes star-fall {
+    0% {
+        opacity: 0;
+        transform: translateY(-30rem);
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+        transform: translateY(80rem);
+    }
+
+    100% {
+
+        opacity: 0;
+        transform: translateY(-30rem);
+    }
 }
