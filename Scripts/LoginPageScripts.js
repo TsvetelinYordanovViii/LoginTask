@@ -1,5 +1,3 @@
-let removeDelay;
-
 $('#register-option').click(() => {
     const login = $('#login');
     const register = $('#register');
@@ -41,7 +39,13 @@ $('#login-option').click(() => {
 
 
 $('#login-btn').click(() => {
-
+    const userPassword = localStorage.getItem($('#login-username').val())
+    if ($('#login-password').val() === userPassword) {
+        window.open("info-page.html", "_self");
+    }
+    else {
+        createCustomAlert('failure', 'Password is incorrect.', '16.5rem');
+    }
 })
 
 $('#register-btn').click(() => {
@@ -57,22 +61,22 @@ registerUser = () => {
     let skipFunction = false;
 
     if (!registrationUsername.checkValidity() || registrationUsername.value.trim() === '') {
-        createCustomAlert('failure', 'No username is entered.');
+        createCustomAlert('failure', 'No username is entered.', '25rem');
         showInvalidField(registrationUsername);
         skipFunction = true;
     }
     else if (!registrationEmail.checkValidity()) {
-        createCustomAlert('failure', 'Valid email address is required.');
+        createCustomAlert('failure', 'Valid email address is required.', '25rem');
         showInvalidField(registrationEmail);
         skipFunction = true;
     }
     else if (!registrationPhone.checkValidity() || registrationPhone.value.trim() === '') {
-        createCustomAlert('failure', 'Phone number is required.');
+        createCustomAlert('failure', 'Phone number is required.', '25rem');
         showInvalidField(registrationPhone);
         skipFunction = true;
     }
     else if (!registrationPassword.checkValidity() || registrationPassword.value.length < 6) {
-        createCustomAlert('failure', 'Enter a password with at least 6 characters.');
+        createCustomAlert('failure', 'Enter a password with at least 6 characters.', '25rem');
         showInvalidField(registrationPassword);
         skipFunction = true;
     }
@@ -81,7 +85,8 @@ registerUser = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
         </svg>
-        Successfully registered.`);
+        Successfully registered.`, '25rem');
+        localStorage.setItem(registrationUsername.value, registrationPassword.value)
     }
 }
 
@@ -92,8 +97,9 @@ showInvalidField = (field) => {
     setTimeout(() => field.classList.remove('invalid-shake'), 1000);
 }
 
-createCustomAlert = (state, message) => {
+createCustomAlert = (state, message, offset) => {
     const alertMessage = $(`<div class="alert-message border border-3 position-absolute rounded-4 p-2 w-75 text-light">${message}</div>`);
+    alertMessage.css('margin-bottom', offset);
     if (state === 'failure') {
         alertMessage.addClass('bg-danger border-danger-subtle');
     }
@@ -179,8 +185,8 @@ createRipple = (cursor, buttonId) => {
     const clickPositionX = cursor.pageX - buttonPositionOffsets.left - (buttonWidth / 2) - rippleRadius;
     const clickPositionY = cursor.pageY - buttonPositionOffsets.top - (buttonHeight / 2) - rippleRadius;
 
-    ripple.css("margin-left", clickPositionX);
-    ripple.css("margin-top", clickPositionY);
+    ripple.css('margin-left', clickPositionX);
+    ripple.css('margin-top', clickPositionY);
 
     $(buttonId).append(ripple);
     setTimeout(() => { ripple.remove() }, 2000);
