@@ -3,7 +3,29 @@
     height: 3.5rem;
     overflow: hidden;
     cursor: pointer;
+    transition: width .5s;
 
+}
+
+#facebook {
+    &:hover {
+        width: 8.25rem;
+    }
+}
+
+#twitter {
+    &:hover {
+        width: 7rem;
+    }
+}
+
+#instagram {
+    &:hover {
+        width: 8.5rem;
+    }
+}
+
+#youtube {
     &:hover {
         width: 8rem;
     }
