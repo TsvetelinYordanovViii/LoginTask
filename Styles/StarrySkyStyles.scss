@@ -365,22 +365,21 @@ body {
 
 @keyframes star-fall {
     0% {
-        opacity: 0;
+        visibility: hidden;
         transform: translateY(-30rem);
     }
 
     5% {
-        opacity: 1;
+        visibility: visible;
     }
 
     95% {
-        opacity: 1;
+        visibility: hidden;
         transform: translateY(80rem);
     }
 
     100% {
-
-        opacity: 0;
+        visibility: hidden;
         transform: translateY(-30rem);
     }
 }
