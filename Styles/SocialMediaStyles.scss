@@ -7,9 +7,33 @@
 
 }
 
+.social-media-icon {
+    background-color: white;
+    width: 3.5rem;
+    height: 3.5rem;
+
+    transition: background-color .5s, color .5s;
+}
+
+.social-media-name {
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    transition: color .5s;
+
+    &.hoveredOver {
+        color: black;
+    }
+}
+
 #facebook {
     &:hover {
         width: 8.25rem;
+    }
+
+    & .social-media-icon.hoveredOver {
+        background-color: dodgerblue;
+        color: white;
     }
 }
 
@@ -17,11 +41,21 @@
     &:hover {
         width: 7rem;
     }
+
+    & .social-media-icon.hoveredOver {
+        background-color: skyblue;
+        color: white;
+    }
 }
 
 #instagram {
     &:hover {
         width: 8.5rem;
+    }
+
+    & .social-media-icon.hoveredOver {
+        background-color: rgb(255, 45, 150);
+        color: white;
     }
 }
 
@@ -29,14 +63,9 @@
     &:hover {
         width: 8rem;
     }
-}
 
-.social-media-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-}
-
-.social-media-name {
-    width: 100%;
-    height: 100%;
+    & .social-media-icon.hoveredOver {
+        background-color: red;
+        color: white;
+    }
 }
